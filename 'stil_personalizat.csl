@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>APA 7th Modified</title>
+    <id>http://www.zotero.org/styles/apa-7th-modified</id>
+    <link href="http://www.zotero.org/styles/apa-7th-modified" rel="self"/>
+    <author>
+      <name>Personalized for Maria</name>
+    </author>
+    <category citation-format="author-date"/>
+    <summary>Modified APA 7th style with specific punctuation and formatting.</summary>
+  </info>
+  
+  <macro name="author">
+    <names variable="author">
+      <name delimiter=" " initialize-with=".," name-as-sort-order="first"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" font-style="normal"/>
+  </macro>
+  
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+
+  <macro name="volume-issue">
+    <group delimiter=", ">
+      <text variable="volume" font-weight="bold"/>
+      <text variable="issue" prefix="(" suffix=")"/>
+    </group>
+  </macro>
+
+  <macro name="page">
+    <text variable="page"/>
+  </macro>
+
+  <citation>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <text macro="author"/>
+      <date variable="issued" prefix=" (" suffix=")"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout delimiter=". ">
+      <text macro="author" suffix=", "/>
+      <date variable="issued" suffix=", "/>
+      <text macro="title" suffix=", "/>
+      <text macro="container-title" suffix=", "/>
+      <text macro="volume-issue" suffix=", "/>
+      <text macro="page"/>
+    </layout>
+  </bibliography>
+</style>
